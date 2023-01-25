@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Modal, Form, Button, ListGroup } from 'react-bootstrap';
-// import { Typeahead } from 'react-bootstrap-typeahead';
 import { sendMessage } from '../http/requests';
 
 const MyModal = ({ user, showModal, setShowModal, messages }) => {
@@ -30,17 +29,6 @@ const MyModal = ({ user, showModal, setShowModal, messages }) => {
       <Modal.Body>
         <Form>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            {/* <Typeahead
-              id="recipientSelection"
-              allowNew
-              labelKey="name"
-              onInputChange={(_, e) => setRecipient(e.target.value)}
-              onChange={setSelected}
-              options={options}
-              placeholder="Choose a recipient..."
-              newSelectionPrefix="Add a new recipient: "
-              selected={selected}
-            /> */}
             <Form.Control
               type="recipient"
               placeholder="Recipient..."
